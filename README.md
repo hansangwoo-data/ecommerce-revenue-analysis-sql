@@ -1,4 +1,4 @@
-# 🔍 Analysis
+# Analysis
 ## 1. New vs Returning Users
 
 ### Objective
@@ -6,16 +6,19 @@ To compare revenue contribution and purchasing behavior between new and returnin
 
 ### Key Findings
 
-* New users (80,106) generated higher total revenue (6.9M) due to a significantly larger user base. 
-* Returning users (29,970) placed 45,165 orders — averaging 1.51 orders per user, compared to 1.00 for new users. 
+* New users (80,106) generated higher total revenue (6.9M) due to a significantly larger user base.
+* Returning users (29,970) placed 45,165 orders — averaging 1.51 orders per user, compared to 1.00 for new users.
 * Average price per item remained nearly identical: 59.45 (New) vs 59.75 (Returning).
 
 ### Insight
-Revenue differences between new and returning users are not driven by spending per transaction, but by purchase frequency. Returning users spend a similar amount per transaction — they simply return more often.  
+Revenue differences between new and returning users are not driven by spending per transaction, but by purchase frequency. Returning users spend a similar amount per transaction — they simply return more often, resulting in higher cumulative contribution over time.  
 
 ### Additional Observation
-When analyzing a smaller time range, results appeared heavily skewed toward new users. Expanding the range revealed a more balanced pattern, suggesting that early-stage data can overrepresent new user activity. 
-For example, when filtering to a 3-month window, new users accounted for over 90% of revenue, but expanding to the full 5-year dataset revealed a more balanced distribution where returning users contributed a substantially larger share of total revenue.
+When analyzing a smaller time range, results appeared heavily skewed toward new users. However, expanding the range revealed a more balanced pattern, suggesting that early-stage data can overrepresent new user activity.
+
+For example, within a 3-month window, new users accounted for over 90% of revenue, while analysis across 5-year dataset showed a significantly larger contribution from returning users.
+
+This highlights the importance of selecting an appropriate analysis window when interpreting user behavior.
 
 ## 2. Category Analysis
 
@@ -24,7 +27,10 @@ To identify which product categories drive revenue and how purchasing behavior d
 
 ### Key Findings
 
-Outerwear & Coats generated the highest revenue (1.3M) with only 9,017 purchases, while Intimates recorded the highest purchase volume (13,586) yet produced only 454K in revenue. Jeans ranked second in revenue (1.2M) while maintaining strong purchase volume (12,774), acting as a core balanced category. Suits showed a high average price (117) but low purchase volume (1,121), indicating untapped revenue potential.
+* Outerwear & Coats generated the highest revenue (1.3M) with only 9,017 purchases.
+* Intimates recorded the highest purchase volume (13,586) but produced only 454K in revenue.
+* Jeans ranked second in revenue (1.2M) while maintaining strong purchase volume (12,774), acting as a core balanced category.
+* Suits showed a high average price (117) but low purchase volume (1,121), indicating potential for revenue growth.
 
 ### Insight
 Revenue is not driven by purchase volume alone. The contrast between Outerwear and Intimates clearly demonstrates that price plays a more significant role than quantity. The product structure naturally segments into three groups: high-value categories such as Outerwear & Coats, balanced categories such as Jeans, and volume-driven categories such as Intimates and Swim.
@@ -37,18 +43,18 @@ To analyze how different price segments influence purchasing behavior and revenu
 
 ### Key Findings
 
-High-priced items generated 5.6M in revenue from 36,790 purchases (avg 152.89), while mid-priced items produced 3.9M from 77,772 purchases (avg 50.32). Low-priced items, despite 67,258 purchases, contributed only 1.3M in revenue. Mid-priced items account for 2x more purchases than high-priced items, yet high-priced items generate 1.4x more revenue — fewer transactions, significantly higher value.
+* High-priced items generated 5.6M in revenue from 36,790 purchases (avg 152.89).
+* Mid-priced items generated 3.9M from 77,772 purchases (avg 50.32).
+* Low-priced items generated 1.3M from 67,258 purchases (avg 19.19).
 
 ### Insight
-The pricing structure reinforces a clear pattern: fewer high-priced transactions generate significantly more revenue than a larger number of low-priced purchases. While lower-priced items contribute to higher purchase volume, revenue is disproportionately driven by higher-priced products.
+The pricing structure reinforces a clear pattern: fewer high-priced transactions generate significantly more revenue than a larger number of low-priced purchases.
 
-This indicates that revenue is more sensitive to price than to transaction volume, highlighting the importance of focusing on high-value purchases rather than simply increasing the number of transactions.
+While low-priced items contribute to higher purchase volume, revenue is disproportionately driven by high-priced products. This indicates that revenue is more sensitive to price than to transaction volume, highlighting the importance of focusing on high-value purchases rather than simply increasing the number of transactions.
 
 ## Key Takeaway
 
-Across all analyses, one consistent principle emerges:
-
-* Revenue is driven by price and purchase frequency — not volume alone.
+Across all analyses, one consistent principle emerges, which is, revenue is driven by price and purchase frequency — not volume alone.
 
 This is supported by three consistent patterns across the data: returning users purchase 1.51x more frequently than new users, Outerwear with 9K purchases generates 3x more revenue than Intimates with 13K purchases, and high-priced items produce significantly higher revenue despite fewer transactions.
 
