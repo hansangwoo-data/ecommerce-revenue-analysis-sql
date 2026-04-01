@@ -27,14 +27,7 @@ To identify which product categories drive revenue and how purchasing behavior d
 Outerwear & Coats generated the highest revenue (1.3M) with only 9,017 purchases, while Intimates recorded the highest purchase volume (13,586) yet produced only 454K in revenue. Jeans ranked second in revenue (1.2M) while maintaining strong purchase volume (12,774), acting as a core balanced category. Suits showed a high average price (117) but low purchase volume (1,121), indicating untapped revenue potential.
 
 ### Insight
-Revenue is not driven by purchase volume alone.
-The contrast between Outerwear and Intimates clearly shows that price plays a more significant role than quantity.
-
-The product structure can be segmented into three groups:
-
-* High-value categories (e.g., Outerwear & Coats)
-* Balanced categories (e.g., Jeans)
-* Volume-driven categories (e.g., Intimates, Swim)
+Revenue is not driven by purchase volume alone. The contrast between Outerwear and Intimates clearly demonstrates that price plays a more significant role than quantity. The product structure naturally segments into three groups: high-value categories such as Outerwear & Coats, balanced categories such as Jeans, and volume-driven categories such as Intimates and Swim.
 
 
 ## 3. Price Analysis
@@ -48,8 +41,6 @@ High-priced items generated 5.6M in revenue from 36,790 purchases (avg 152.89), 
 
 ### Insight
 The pricing structure clearly separates volume drivers (Low price), core revenue stabilizers (Mid price), and revenue drivers (High price). Mid-priced items generate twice the purchase volume of high-priced items, yet high-priced items produce 1.4x more revenue — confirming that fewer transactions at higher prices yield significantly greater value.
-
-Mid-priced items have 2x more purchases than high-priced items, yet high-priced items generate 1.4x more revenue — fewer transactions, significantly higher value.
 
 ## Key Takeaway
 
