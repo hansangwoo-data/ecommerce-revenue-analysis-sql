@@ -11,7 +11,7 @@ To compare revenue contribution and purchasing behavior between new and returnin
 * Average price per item remained nearly identical: 59.45 (New) vs 59.75 (Returning).
 
 ### Insight
-Revenue is not driven by purchase volume alone. The contrast between Outerwear and Intimates clearly demonstrates that price plays a more significant role than quantity. The product structure naturally segments into three groups: high-value categories such as Outerwear & Coats, balanced categories such as Jeans, and volume-driven categories such as Intimates and Swim.
+Revenue differences between new and returning users are not driven by spending per transaction, but by purchase frequency. Returning users spend a similar amount per transaction — they simply return more often.  
 
 ### Additional Observation
 When analyzing a smaller time range, results appeared heavily skewed toward new users. Expanding the range revealed a more balanced pattern, suggesting that early-stage data can overrepresent new user activity. 
@@ -40,7 +40,9 @@ To analyze how different price segments influence purchasing behavior and revenu
 High-priced items generated 5.6M in revenue from 36,790 purchases (avg 152.89), while mid-priced items produced 3.9M from 77,772 purchases (avg 50.32). Low-priced items, despite 67,258 purchases, contributed only 1.3M in revenue. Mid-priced items account for 2x more purchases than high-priced items, yet high-priced items generate 1.4x more revenue — fewer transactions, significantly higher value.
 
 ### Insight
-The pricing structure clearly separates volume drivers (Low price), core revenue stabilizers (Mid price), and revenue drivers (High price). Mid-priced items generate twice the purchase volume of high-priced items, yet high-priced items produce 1.4x more revenue — confirming that fewer transactions at higher prices yield significantly greater value.
+The pricing structure reinforces a clear pattern: fewer high-priced transactions generate significantly more revenue than a larger number of low-priced purchases. While lower-priced items contribute to higher purchase volume, revenue is disproportionately driven by higher-priced products.
+
+This indicates that revenue is more sensitive to price than to transaction volume, highlighting the importance of focusing on high-value purchases rather than simply increasing the number of transactions.
 
 ## Key Takeaway
 
@@ -53,7 +55,11 @@ This is supported by three consistent patterns across the data: returning users 
 
 ## 💼 Business Implications
 
-The analysis suggests that optimizing for transaction volume alone is insufficient. Effective revenue growth requires a combined focus on two dimensions: user retention, where returning users demonstrate stronger engagement through repeated purchases and increasing retention directly improves revenue efficiency, and high-value pricing strategy, where revenue is disproportionately driven by high-priced items and encouraging purchases in higher price segments is critical.
+The analysis suggests that optimizing for transaction volume alone is insufficient. Effective revenue growth requires a combined focus on user retention and high-value pricing strategy.
+
+Returning users demonstrate stronger engagement through repeated purchases, while revenue is disproportionately driven by high-priced items. Together, these findings indicate that the most impactful growth strategy lies in encouraging high-value purchases among returning users.
+
+This also suggests that strategies focused solely on increasing transaction volume may be less effective than those targeting high-value users and purchases.
 
 
 ## 🚀 Actionable Strategy
