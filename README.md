@@ -43,7 +43,7 @@ To compare revenue contribution and purchasing behavior between new and returnin
 - New users (80,106) generated higher total revenue (6.9M) due to a significantly larger user base.
 - Returning users (29,970) placed 45,165 orders — averaging 1.51 orders per user, compared to 1.00 for new users.
 - Average price per item remained nearly identical: 59.45 USD (New) vs 59.75 USD (Returning).
-<img src="images/revenue_by_user_type.png" width="500"/>
+<img src="images/revenue_by_user_type.png" width="650"/>
 
 **Insight**
 
@@ -90,7 +90,7 @@ To analyze how different price segments influence purchasing behavior and revenu
 - High-priced items generated 5.6M USD in revenue from 36,790 purchases (avg 152.89 USD).
 - Mid-priced items generated 3.9M USD from 77,772 purchases (avg 50.32 USD).
 - Low-priced items generated 1.3M USD from 67,258 purchases (avg 19.19 USD).
-<img src="images/revenue_by_price_segment.png" width="500"/>
+<img src="images/revenue_by_price_segment.png" width="650"/>
 
 **Insight**
 
