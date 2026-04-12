@@ -33,7 +33,7 @@ To identify which product categories drive revenue and how purchasing behavior d
 * Suits showed a high average price (117) but low purchase volume (1,121), indicating potential for revenue growth.
 
 ### Insight
-Revenue is not driven by purchase volume alone. The contrast between Outerwear and Intimates clearly demonstrates that price plays a more significant role than quantity. The product structure naturally segments into three groups: high-value categories such as Outerwear & Coats, balanced categories such as Jeans, and volume-driven categories such as Intimates and Swim.
+Revenue performance is structurally driven by transaction value and purchase frequency, rather than purchase volume alone. The contrast between Outerwear and Intimates clearly demonstrates that price plays a more significant role than quantity. The product structure naturally segments into three groups: high-value categories such as Outerwear & Coats, balanced categories such as Jeans, and volume-driven categories such as Intimates and Swim. This indicates that category performance is not uniform, and each category operates under a different revenue mechanism.
 
 
 ## 3. Price Analysis
@@ -50,7 +50,7 @@ To analyze how different price segments influence purchasing behavior and revenu
 ### Insight
 The pricing structure reinforces a clear pattern: fewer high-priced transactions generate significantly more revenue than a larger number of low-priced purchases.
 
-While low-priced items contribute to higher purchase volume, revenue is disproportionately driven by high-priced products. This indicates that revenue is more sensitive to price than to transaction volume, highlighting the importance of focusing on high-value purchases rather than simply increasing the number of transactions.
+While low-priced items contribute to higher purchase volume, revenue is disproportionately driven by high-priced products. This indicates that revenue is more sensitive to price than to transaction volume, highlighting that increasing transaction value is more impactful than increasing purchase frequency for revenue growth. rather than simply increasing the number of transactions.
 
 ## Key Takeaway
 
