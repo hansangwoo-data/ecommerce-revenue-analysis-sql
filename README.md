@@ -70,7 +70,7 @@ To identify which product categories drive revenue and how purchasing behavior d
 - Intimates recorded the highest purchase volume (13,586) but produced only 454K USD in revenue.
 - Jeans ranked second in revenue (1.2M USD) while maintaining strong purchase volume (12,774), acting as a core balanced category.
 - Suits showed a high average price (117 USD) but low purchase volume (1,121), indicating potential for revenue growth.
-<img src="images/revenue_by_category.png" width="650"/>
+<img src="images/revenue_by_category.png" width="850"/>
 
 **Insight**
 
