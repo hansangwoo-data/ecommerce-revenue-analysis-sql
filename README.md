@@ -5,6 +5,14 @@ This project analyzes user purchase behavior and revenue patterns using BigQuery
 SQL queries were written in BigQuery to extract pre-aggregated results, which are then loaded into a Jupyter notebook for visualization and interpretation.
 
 ---
+## Business Problem
+
+E-commerce platforms often struggle to understand what truly drives revenue: 
+Is it the number of purchases, the price of items, or user behavior?
+
+This analysis aims to identify the key drivers of revenue and uncover actionable strategies for growth.  
+
+---
 
 ## Project Structure
 
