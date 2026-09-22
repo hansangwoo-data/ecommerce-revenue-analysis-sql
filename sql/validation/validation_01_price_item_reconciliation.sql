@@ -17,9 +17,10 @@ labeled_items AS (
     order_id,
     sale_price,
     CASE
+      WHEN sale_price IS NULL THEN NULL
       WHEN sale_price < 30 THEN 'Low'
       WHEN sale_price < 80 THEN 'Mid'
-      ELSE 'High'
+      WHEN sale_price >= 80 THEN 'High'
     END AS price_band
   FROM eligible_items
 ),

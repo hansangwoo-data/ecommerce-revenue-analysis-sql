@@ -47,11 +47,11 @@ sql-ecommerce-revenue-analysis/
 
 ## Reproducing the published results
 
-The three user-supplied aggregate CSV exports in `data/` are the authoritative inputs for this publication refresh. BigQuery was not rerun for this refresh. The exports do not record an extraction timestamp or observation-window bounds.
+Aggregate results exported from BigQuery on 2026-09-22 are stored in the three CSV files in `data/`. BigQuery was not rerun for this hardening patch. Observation-window bounds were not recorded.
 
-Install pandas, matplotlib, and Jupyter, then run all cells in `notebook/sql_ecommerce_revenue_analysis.ipynb` from the notebook directory or repository root. The notebook checks aggregate consistency and regenerates the six PNG charts in `images/`. These checks do not replace the source-level validation queries in `sql/validation/`.
+Install pandas, matplotlib, and Jupyter, then run all cells in `notebook/sql_ecommerce_revenue_analysis.ipynb` from the notebook directory or repository root. The notebook checks aggregate consistency and regenerates the six PNG charts in `images/`. These checks do not replace the source-level validation queries in `sql/validation/`. The added `validation_04_source_integrity.sql` summarizes source IDs, completed-order coverage, price quality, and category totals against the pre-product-join population; it has not been run against BigQuery in this patch.
 
-`gross_sales = SUM(order_items.sale_price)` for orders with `status = 'Complete'`. AOV is gross sales per order; average item price is gross sales per item. First Order means each user's earliest observed completed order, ordered by `created_at, order_id`, not necessarily their first-ever purchase. The reported metrics describe this supplied snapshot.
+`gross_sales = SUM(order_items.sale_price)` for orders with `orders.status = 'Complete'`; no separate item-status filter is applied. AOV is gross sales per order; average item price is gross sales per item. First Order means each user's earliest observed completed order, ordered by `created_at, order_id`, not necessarily their first-ever purchase. The reported metrics describe this exported snapshot. First/Repeat `user_count` values are not additive because repeat-order users are a subset of users with a first completed order.
 
 ---
 
@@ -112,7 +112,7 @@ Compare completed-order item volume and gross sales across analysis-defined pric
 - Mid: 30 to < 80 USD
 - High: >= 80 USD
 
-These thresholds are descriptive segments defined for this analysis, not business-standard pricing tiers.
+These thresholds are descriptive segments defined for this analysis, not business-standard pricing tiers. NULL prices remain unclassified rather than falling into High. The user-run validation reported zero NULL prices among items attached to completed orders for the current export; this patch does not change the published results.
 
 **Key Findings**
 - Low-priced items: 16,508 items across 14,092 orders, ~317K USD in gross sales, average item price ~19.21 USD.
