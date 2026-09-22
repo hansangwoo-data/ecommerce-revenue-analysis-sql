@@ -7,10 +7,9 @@ SQL queries were written in BigQuery to extract pre-aggregated results, which ar
 ---
 ## Business Problem
 
-E-commerce platforms often struggle to understand what truly drives revenue: 
-Is it the number of purchases, the price of items, or user behavior?
+How do purchase stage, product category, and item price relate to gross sales patterns?
 
-This analysis aims to identify the key drivers of revenue and uncover actionable strategies for growth.  
+This analysis compares completed first vs repeat orders, category-level sales structure, and analysis-defined price bands to describe how repeat purchase activity, item volume, and average item value relate to gross sales.  
 
 ---
 
@@ -24,9 +23,11 @@ sql-ecommerce-revenue-analysis/
 │   └── sql_ecommerce_revenue_analysis.ipynb
 │
 ├── sql/
-│   ├── 01_new_vs_returning.sql
+│   ├── 01_first_vs_repeat_orders.sql
 │   ├── 02_category_analysis.sql
-│   └── 03_price_analysis.sql
+│   ├── 03_price_analysis.sql
+│   └── validation/
+│       └── validation_*.sql
 │
 └── images/
     ├── revenue_by_user_type.png
@@ -115,22 +116,21 @@ Only orders with `status = 'Complete'` are included. Price-band `order_count` va
 
 ## Key Takeaway
 
-Across all analyses, one consistent principle emerges: revenue is driven by price and purchase frequency — not volume alone.
+Across the three analyses, gross sales are best understood through a combination of repeat purchase activity, item volume, and average item value rather than any single metric alone.
 
-This is supported by three consistent patterns across the data:
-- Returning users purchase 1.51x more frequently than new users
-- Outerwear with 9K purchases generates 3x more revenue than Intimates with 13K purchases
-- High-priced items produce significantly higher revenue despite fewer transactions
+- Repeat orders exist, but their basket value is similar to first orders.
+- Category revenue differs because categories combine different levels of item volume and average item price.
+- High-priced items contribute the largest share of gross sales despite lower item volume.
 
 ---
 
 ## Business Implications
 
-The analysis suggests that optimizing for transaction volume alone is insufficient. Effective revenue growth requires a combined focus on user retention and high-value pricing strategy.
+The analysis does not identify a single growth lever. Instead, it highlights the importance of separating repeat purchase activity, item volume, and item value when interpreting gross sales performance.
 
-Returning users demonstrate stronger engagement through repeated purchases, while revenue is disproportionately driven by high-priced items. Together, these findings suggest that encouraging high-value purchases among returning users may represent the most impactful growth lever.
+For decision-making, teams should avoid relying on transaction volume alone and should evaluate how repeat purchase behavior and product mix contribute to gross sales.
 
-Strategies focused solely on increasing transaction volume may be less effective than those targeting high-value users and purchases.
+These findings are descriptive and should be validated with controlled time windows, cohort-based retention analysis, and additional profitability or margin data before being used for strategy decisions.
 
 ---
 
