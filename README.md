@@ -89,19 +89,27 @@ Only orders with `status = 'Complete'` are included. Category-level `order_count
 
 **Objective**
 
-To analyze how different price segments influence purchasing behavior and revenue.
+Compare completed-order item volume and gross sales across analysis-defined price bands.
+
+**Price Band Definition**
+- Low: < 30 USD
+- Mid: 30 to < 80 USD
+- High: >= 80 USD
+
+These thresholds are descriptive segments defined for this analysis, not business-standard pricing tiers.
 
 **Key Findings**
-- High-priced items generated 5.6M USD in revenue from 36,790 purchases (avg 152.89 USD).
-- Mid-priced items generated 3.9M USD from 77,772 purchases (avg 50.32 USD).
-- Low-priced items generated 1.3M USD from 67,258 purchases (avg 19.19 USD).
-<img src="images/revenue_by_price_segment.png" width="650"/>
+- Low-priced items: 16,508 items across 14,092 orders, ~317K USD in gross sales, average item price ~19.21 USD.
+- Mid-priced items: 19,649 items across 16,393 orders, ~991K USD in gross sales, average item price ~50.43 USD.
+- High-priced items: 9,088 items across 8,349 orders, ~1.394M USD in gross sales, average item price ~153.34 USD.
 
 **Insight**
 
-The pricing structure reinforces a clear pattern: fewer high-priced transactions generate significantly more revenue than a larger number of low-priced purchases.
+Gross sales distribution differs substantially across price bands because item volume and average item value vary together. High-priced items generated the largest share of gross sales despite lower item volume.
 
-While low-priced items contribute to higher purchase volume, revenue is disproportionately driven by high-priced products. This indicates that revenue is more sensitive to price than to transaction volume — increasing transaction value is more impactful than increasing the number of transactions.
+**Scope Note**
+
+Only orders with `status = 'Complete'` are included. Price-band `order_count` values are not additive because a single order can contain items from multiple price bands.
 
 ---
 
