@@ -19,6 +19,11 @@ This analysis compares completed first vs repeat orders, category-level sales st
 sql-ecommerce-revenue-analysis/
 │
 ├── README.md
+├── data/
+│   ├── first_vs_repeat_orders.csv
+│   ├── category_analysis.csv
+│   └── price_analysis.csv
+│
 ├── notebook/
 │   └── sql_ecommerce_revenue_analysis.ipynb
 │
@@ -30,13 +35,23 @@ sql-ecommerce-revenue-analysis/
 │       └── validation_*.sql
 │
 └── images/
-    ├── revenue_by_user_type.png
-    ├── order_volume_by_user_type.png
-    ├── revenue_by_category.png
-    ├── order_volume_by_category.png
-    ├── revenue_by_price_segment.png
-    └── order_volume_by_price_segment.png
+    ├── gross_sales_by_order_stage.png
+    ├── order_count_by_order_stage.png
+    ├── gross_sales_by_category.png
+    ├── item_count_by_category.png
+    ├── gross_sales_by_price_band.png
+    └── item_count_by_price_band.png
 ```
+
+---
+
+## Reproducing the published results
+
+The three user-supplied aggregate CSV exports in `data/` are the authoritative inputs for this publication refresh. BigQuery was not rerun for this refresh. The exports do not record an extraction timestamp or observation-window bounds.
+
+Install pandas, matplotlib, and Jupyter, then run all cells in `notebook/sql_ecommerce_revenue_analysis.ipynb` from the notebook directory or repository root. The notebook checks aggregate consistency and regenerates the six PNG charts in `images/`. These checks do not replace the source-level validation queries in `sql/validation/`.
+
+`gross_sales = SUM(order_items.sale_price)` for orders with `status = 'Complete'`. AOV is gross sales per order; average item price is gross sales per item. First Order means each user's earliest observed completed order, ordered by `created_at, order_id`, not necessarily their first-ever purchase. The reported metrics describe this supplied snapshot.
 
 ---
 
