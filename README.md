@@ -68,20 +68,20 @@ Only orders with `status = 'Complete'` are included. The share of users with rep
 
 **Objective**
 
-To identify which product categories drive revenue and how purchasing behavior differs across categories.
+Compare gross sales, item volume, order coverage, and average item price across product categories using completed orders only.
 
 **Key Findings**
-- Outerwear & Coats generated the highest revenue (1.3M USD) with only 9,017 purchases.
-- Intimates recorded the highest purchase volume (13,586) but produced only 454K USD in revenue.
-- Jeans ranked second in revenue (1.2M USD) while maintaining strong purchase volume (12,774), acting as a core balanced category.
-- Suits showed a high average price (117 USD) but low purchase volume (1,121), indicating potential for revenue growth.
-<img src="images/revenue_by_category.png" width="900"/>
+- Outerwear & Coats generated the highest gross sales (~337K USD) from 2,269 items across 2,219 orders, with an average item price of about 148.72 USD.
+- Jeans generated the second-highest gross sales (~308K USD) from 3,203 items across 3,085 orders, with an average item price of about 96.09 USD.
+- Intimates recorded the highest item volume (3,323 items) across 3,110 orders but generated about 109K USD in gross sales, with a much lower average item price of about 32.83 USD.
 
 **Insight**
 
-Revenue performance is structurally driven by transaction value and purchase frequency, rather than purchase volume alone. The contrast between Outerwear and Intimates clearly demonstrates that price plays a more significant role than quantity.
+Category revenue reflects the combination of item volume and average item price rather than volume alone. High-volume categories do not necessarily generate the highest gross sales when their average item price is substantially lower.
 
-The product structure naturally segments into three groups: high-value categories such as Outerwear & Coats, balanced categories such as Jeans, and volume-driven categories such as Intimates and Swim. This indicates that category performance is not uniform, and each category operates under a different revenue mechanism.
+**Scope Note**
+
+Only orders with `status = 'Complete'` are included. Category-level `order_count` values are not additive across categories because a single order can contain items from multiple categories.
 
 ---
 
