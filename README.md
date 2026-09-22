@@ -41,29 +41,26 @@ sql-ecommerce-revenue-analysis/
 
 ## Analysis
 
-### 1. New vs Returning Users
+### 1. First-order vs Repeat-order Behavior
 
 **Objective**
 
-To compare revenue contribution and purchasing behavior between new and returning users.
+Compare completed first orders with subsequent completed repeat orders for the same users.
 
 **Key Findings**
-- New users (80,106) generated higher total revenue (6.9M) due to a significantly larger user base.
-- Returning users (29,970) placed 45,165 orders — averaging 1.51 orders per user, compared to 1.00 for new users.
-- Average price per item remained nearly identical: 59.45 USD (New) vs 59.75 USD (Returning).
-<img src="images/revenue_by_user_type.png" width="650"/>
+- 27,511 users generated at least one completed order.
+- 3,316 users generated repeat-order activity, producing 3,655 repeat orders.
+- First orders had an average order value of about 86.49 USD, while repeat orders averaged about 88.16 USD.
+- Average items per order were similar: about 1.45 for first orders vs 1.47 for repeat orders.
+- Average item prices were nearly identical at about 59.67 USD vs 60.05 USD.
 
 **Insight**
 
-Revenue differences between new and returning users are not driven by spending per transaction, but by purchase frequency. Returning users spend a similar amount per transaction — they simply return more often, resulting in higher cumulative contribution over time.
+Repeat-order activity exists, but repeat orders are not structurally much larger or more expensive than first orders. The main difference is the occurrence of additional purchase activity rather than a major change in basket value.
 
-**Additional Observation**
+**Scope Note**
 
-When filtering to a 3-month window, results appeared heavily skewed toward new users, suggesting that early-stage data can overrepresent new user activity.
-
-Expanding to the full dataset revealed a more balanced pattern, with returning users contributing significantly more to revenue over time.
-
-This highlights the importance of selecting an appropriate analysis window when interpreting user behavior.
+Only orders with `status = 'Complete'` are included. The share of users with repeat orders should not be interpreted as a retention rate because users may have different observation windows.
 
 ---
 
