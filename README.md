@@ -46,15 +46,18 @@ sql-ecommerce-revenue-analysis/
 ---
 
 ## Reproducing the Results
-Aggregate results were exported from BigQuery on 2026-09-22 and are stored in data/.
-Run all cells in notebook/sql_ecommerce_revenue_analysis.ipynb to reproduce the tables and six charts. 
-Source-level validation queries are available in sql/validation/ and were used to verify order/item coverage, ID integrity, price quality, product mapping, and aggregate reconciliation.
-Metric scope
-- Only orders with orders.status = 'Complete' are included.
-- gross_sales = SUM(order_items.sale_price)
+
+Aggregate results were exported from BigQuery on 2026-09-22 and are stored in `data/`. Run all cells in `notebook/sql_ecommerce_revenue_analysis.ipynb` to reproduce the tables and six charts.
+
+Source-level validation queries are available in `sql/validation/` and were used to verify order/item coverage, ID integrity, price quality, product mapping, and aggregate reconciliation.
+
+### Metric Scope
+
+- Only orders with `orders.status = 'Complete'` are included.
+- `gross_sales = SUM(order_items.sale_price)`
 - AOV = gross sales / order count
-- First Order = earliest observed completed order by created_at, order_id
-- Repeat users are a subset of first-order users, so stage-level user_count values are not additive.
+- First Order = earliest observed completed order by `created_at, order_id`
+- Repeat users are a subset of first-order users, so stage-level `user_count` values are not additive.
 
 ---
 
