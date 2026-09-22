@@ -45,13 +45,16 @@ sql-ecommerce-revenue-analysis/
 
 ---
 
-## Reproducing the published results
-
-Aggregate results exported from BigQuery on 2026-09-22 are stored in the three CSV files in `data/`. BigQuery was not rerun for this hardening patch. Observation-window bounds were not recorded.
-
-Install pandas, matplotlib, and Jupyter, then run all cells in `notebook/sql_ecommerce_revenue_analysis.ipynb` from the notebook directory or repository root. The notebook checks aggregate consistency and regenerates the six PNG charts in `images/`. These checks do not replace the source-level validation queries in `sql/validation/`. The added `validation_04_source_integrity.sql` summarizes source IDs, completed-order coverage, price quality, and category totals against the pre-product-join population; it has not been run against BigQuery in this patch.
-
-`gross_sales = SUM(order_items.sale_price)` for orders with `orders.status = 'Complete'`; no separate item-status filter is applied. AOV is gross sales per order; average item price is gross sales per item. First Order means each user's earliest observed completed order, ordered by `created_at, order_id`, not necessarily their first-ever purchase. The reported metrics describe this exported snapshot. First/Repeat `user_count` values are not additive because repeat-order users are a subset of users with a first completed order.
+## Reproducing the Results
+Aggregate results were exported from BigQuery on 2026-09-22 and are stored in data/.
+Run all cells in notebook/sql_ecommerce_revenue_analysis.ipynb to reproduce the tables and six charts. 
+Source-level validation queries are available in sql/validation/ and were used to verify order/item coverage, ID integrity, price quality, product mapping, and aggregate reconciliation.
+Metric scope
+- Only orders with orders.status = 'Complete' are included.
+- gross_sales = SUM(order_items.sale_price)
+- AOV = gross sales / order count
+- First Order = earliest observed completed order by created_at, order_id
+- Repeat users are a subset of first-order users, so stage-level user_count values are not additive.
 
 ---
 
